@@ -8,11 +8,11 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './auth/login/login.component';
 import { PhoneNumberDirective } from './core/directives/phone-number.directive';
-import { FormsModule } from '@angular/forms';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -24,9 +24,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpClientModule,
     CoreModule,
+    AuthModule,
     SharedModule,
     HomeModule,
     AppRoutingModule,
