@@ -33,8 +33,10 @@ export class CustomvalidationService {
 
       if (passwordControl.value !== confirmPasswordControl.value) {
         confirmPasswordControl.setErrors({ passwordMismatch: true });
+        return null;
       } else {
         confirmPasswordControl.setErrors(null);
+        return null;
       }
     }
   }
@@ -60,4 +62,15 @@ export class CustomvalidationService {
     const UserList = ['Goutam', 'admin', 'user', 'superuser'];
     return (UserList.indexOf(userName) > -1);
   }
+  validatePhoneNumber():ValidatorFn
+  {
+    return (control: AbstractControl) => {
+      if (!control.value) {
+        return null;
+      }
+      const regex = new RegExp('^[0-9_-]{10,12}');
+      const valid = regex.test(control.value);
+      return valid ? null : { invalidPassword: true };
+  }
+}
 }

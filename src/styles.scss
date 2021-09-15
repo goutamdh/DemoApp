@@ -2,3 +2,17 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+
+.btn-success
+{
+    --bg-opacity: 1;
+    background-color: #00d2f6;
+    background-color: rgba(0,210,246,var(--bg-opacity));
+    border-color: #0aabc8 !important;
+    border-radius: 30px !important;
+    &:hover {
+    background: #0aabc8 !important;
+    box-shadow: 0 10px 20px rgb(108 170 181 / 15%)!important;
+}
+}

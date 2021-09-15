@@ -19,11 +19,11 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = this.fb.group({
-      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       username: ['', [Validators.required], this.customValidator.userNameValidator.bind(this.customValidator)],
       password: ['', Validators.compose([Validators.required, this.customValidator.patternValidator()])],
       confirmPassword: ['', [Validators.required]],
+      mobileNumber: ['', Validators.compose([Validators.required, this.customValidator.validatePhoneNumber()])],
     },
       {
         validator: this.customValidator.MatchPassword('password', 'confirmPassword'),
