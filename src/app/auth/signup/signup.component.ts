@@ -9,7 +9,7 @@ import { CustomvalidationService } from 'src/app/services/customvalidation.servi
 })
 export class SignupComponent implements OnInit {
 
-  registerForm: FormGroup | any;
+  registerForm: any;
   submitted = false;
 
   constructor(
