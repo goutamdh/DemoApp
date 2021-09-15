@@ -1,18 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-
-.btn-success
-{
-    --bg-opacity: 1;
-    background-color: #00d2f6;
-    background-color: rgba(0,210,246,var(--bg-opacity));
-    border-color: #0aabc8 !important;
-    border-radius: 30px !important;
-    &:hover {
+.btn-success {
+  --bg-opacity: 1;
+  background-color: #00d2f6 !important;
+  background-color: rgba(0, 210, 246, var(--bg-opacity)) !important;
+  border-color: #0aabc8 !important;
+  border-radius: 30px !important;
+  &:hover {
     background: #0aabc8 !important;
-    box-shadow: 0 10px 20px rgb(108 170 181 / 15%)!important;
+    box-shadow: 0 10px 20px rgb(108 170 181 / 15%) !important;
+  }
 }
+.card-header {
+  background-color: #17a2b8a6 !important;
+  color: #fff !important;
+  border-bottom: 1px solid #8bdfec57 !important;
 }
