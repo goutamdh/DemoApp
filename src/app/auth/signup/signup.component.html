@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row  mt-5 justify-content-center align-items-center ">
         <div class="col-md-6 mx-auto">
-
+            
         </div>
         <div class="col-md-6 mx-auto ">
             <div class="card">
@@ -39,11 +39,11 @@
                             <input type="text" class="form-control" formControlName="mobileNumber">
                             <span class="text-danger"
                                 *ngIf="(registerFormControl.mobileNumber.touched || submitted) && registerFormControl.mobileNumber.errors?.required">
-                                User Name is required
+                                Phone number is required
                             </span>
                             <span class="text-danger"
-                                *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.userNameNotAvailable">
-                                User Name is not available
+                                *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.mobileNumber">
+                                Enter a valid phone number
                             </span>
                         </div>
                         <div class="form-group">
